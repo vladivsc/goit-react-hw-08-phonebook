@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
 import ContactItem from './ContactItem/ContactItem';
 
-import styles from '../phonebook.module.scss';
-
 const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
@@ -18,7 +16,7 @@ const ContactList = () => {
   const filterContacts = getFilteredContacts();
 
   return (
-    <ul className={styles.list}>
+    <ul>
       {contacts.length === 0 ? (
         <p>Contacts list is empty!</p>
       ) : (

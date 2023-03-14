@@ -3,9 +3,7 @@ import { useEffect } from 'react';
 
 import { fetchAllContacts, fetchAddContact } from 'redux/operations';
 
-import initialState from 'components/Phonebook/initialState';
-
-import styles from '../phonebook.module.scss';
+import initialState from 'components/initialState';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -30,9 +28,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={styles.block}>
+    <div>
       <form onSubmit={handleSubmit}>
-        <div className={styles.formGroup}>
+        <div>
           <label>Name</label>
           <input
             onChange={handleChange}
@@ -51,9 +49,7 @@ const ContactForm = () => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-          <button type="submit" className={styles.btn}>
-            Add contacts
-          </button>
+          <button type="submit">Add contacts</button>
         </div>
       </form>
     </div>
