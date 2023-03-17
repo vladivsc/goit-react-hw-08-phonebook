@@ -21,5 +21,5 @@ export default ContactItem;
 ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
 };
