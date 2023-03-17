@@ -20,8 +20,8 @@ const ContactList = () => {
       {contacts.length === 0 ? (
         <p>Contacts list is empty!</p>
       ) : (
-        filterContacts.map(({ id, name, phone }) => {
-          return <ContactItem key={id} id={id} name={name} phone={phone} />;
+        filterContacts.map(({ id, name, number }) => {
+          return <ContactItem key={id} id={id} name={name} number={number} />;
         })
       )}
     </ul>

@@ -2,11 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-import {
-  getAllContacts,
-  addContact,
-  deleteContact,
-} from 'components/api/contacts-api';
+import { getAllContacts, addContact, deleteContact } from 'api/contacts-api';
 
 export const fetchAllContacts = createAsyncThunk(
   'contacts/fetchAll',

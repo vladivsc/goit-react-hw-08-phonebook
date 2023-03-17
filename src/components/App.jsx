@@ -1,6 +1,11 @@
-import Phonebook from './Phonebook';
-import Navigation from './Navigation/Navigation';
+import UserRoutes from './UserRoutes';
+import Navbar from './Navbar/Navbar';
 
 export const App = () => {
-  return <Phonebook />;
+  return (
+    <>
+      <Navbar />
+      <UserRoutes />
+    </>
+  );
 };

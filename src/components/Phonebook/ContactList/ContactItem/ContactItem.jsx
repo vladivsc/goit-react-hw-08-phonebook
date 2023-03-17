@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
-import { fetchDeleteContact } from 'redux/operations';
+import { fetchDeleteContact } from 'redux/contacts/contacts-operations';
 
 import PropTypes from 'prop-types';
 
-const ContactItem = ({ id, name, phone }) => {
+const ContactItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
   return (
     <li>
-      {name}: {phone}
+      {name}: {number}
       <button onClick={() => dispatch(fetchDeleteContact(id))} type="button">
         Delete
       </button>
@@ -21,5 +21,5 @@ export default ContactItem;
 ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
