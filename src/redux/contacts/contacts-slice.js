@@ -31,7 +31,6 @@ const contactSlice = createSlice({
       })
       .addCase(fetchAddContact.pending, store => {
         store.error = null;
-        console.log(store);
       })
       .addCase(fetchAddContact.fulfilled, (store, { payload }) => {
         store.isLoading = false;
@@ -40,7 +39,6 @@ const contactSlice = createSlice({
       .addCase(fetchAddContact.rejected, (store, { payload }) => {
         store.isLoading = false;
         store.error = payload;
-        console.log(store, payload);
       })
       .addCase(fetchDeleteContact.pending, store => {
         store.isLoading = true;
