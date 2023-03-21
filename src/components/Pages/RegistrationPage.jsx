@@ -16,12 +16,7 @@ const RegistrationPage = () => {
 
   if (isLogin) return <Navigate to="/contacts" />;
 
-  return (
-    <div>
-      <h1>Registration page</h1>
-      <RegistrationForm onSubmit={handleSignup} />
-    </div>
-  );
+  return <RegistrationForm onSubmit={handleSignup} />;
 };
 
 export default RegistrationPage;

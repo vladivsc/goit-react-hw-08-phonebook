@@ -1,12 +1,12 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { selectAuth } from 'redux/selectors';
+import { getAuth } from 'redux/selectors';
 
 import Loader from 'components/shared/Loader/Loader';
 
 const PublicRoute = () => {
-  const { isLogin, token } = useSelector(selectAuth);
+  const { isLogin, token } = useSelector(getAuth);
 
   if (!isLogin && token) {
     return <Loader />;
